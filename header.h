@@ -7,6 +7,8 @@
 #include <conio.h>
 
 // visual.c
+extern void printBanner(int start_x, int start_y);
+extern void printBox(int start_x, int start_y, char* value);
 extern void placeStage(int width, int height);
 extern void placeFlag(struct flag* flags, int size); 
 extern void placePlayer(int x, int y);
@@ -23,10 +25,16 @@ extern void movePlayer(int* x, int* y, struct flag* flags);
 extern int random_range(int min, int max);
 extern void clear();
 extern int isNotMove(int x, int y, struct flag* flags);
+extern int selectValue(struct coord* coords, int length);
 
 // structures
 struct flag {
 	int x;
 	int y;
 	int item_id;
+};
+
+struct coord {
+	int x;
+	int y;
 };

@@ -130,6 +130,7 @@
     <ClCompile Include="visual.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ascii.h" />
     <ClInclude Include="header.h" />
     <ClInclude Include="settings.h" />
   </ItemGroup>

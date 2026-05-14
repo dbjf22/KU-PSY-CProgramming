@@ -1,6 +1,19 @@
 #include "header.h"
 #include "settings.h"
+#include "ascii.h"
 
+void printBanner(int start_x, int start_y) {
+	goToXY(start_x, start_y);
+	printf("%s", banner);
+}
+
+void printBox(int start_x, int start_y, char* value) {
+	goToXY(start_x, start_y);
+	printf("%s", box);
+	goToXY(start_x + 6, start_y + 1);
+	printf("%s", value);
+	goToXY(start_x, start_y + 2);
+}
 
 void placeStage(int width, int height) {
 	for (int i = 0; i < width; i++) {
