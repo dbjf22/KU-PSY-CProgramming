@@ -15,16 +15,13 @@ void printHand(int k, int isReverse) {
 		}
 	}
 	else {
-		if (k == 0)
-		{
+		if (k == 0) {
 			printAsciiXY(scissors_reverse, 20, 0);
 		}
-		else if (k == 1)
-		{
+		else if (k == 1) {
 			printAsciiXY(rock_reverse, 20, 0);
 		}
-		else if (k == 2)
-		{
+		else if (k == 2) {
 			printAsciiXY(paper_reverse, 20, 0);
 		}
 	}
@@ -43,16 +40,13 @@ void rockScissorsPaper() {
 		com = rand() % 3;
 		fake = rand() % 3;
 
-		if (fake == 0)
-		{
+		if (fake == 0) {
 			printf("%s \n ??? : 가위를 낼거야\n\n", scissors);
 		}
-		else if (fake == 1)
-		{
+		else if (fake == 1) {
 			printf("%s \n ??? : 바위를 낼거야\n\n", rock);
 		}
-		else
-		{
+		else {
 			printf("%s \n ??? : 보를 낼거야\n\n", paper);
 		}
 
