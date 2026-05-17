@@ -9,6 +9,7 @@ void sniper() {
     printf("[ 스나이퍼 ]\n\n");
     printf("Enter 키를 눌러 움직이는 사각형을 틀 안에 넣어 조준경을 정렬하세요!\n\n");
     printf("시작하려면 스페이스를 누르세요. \n나가려면 ESC를 누르세요.\n");
+    
     if (spaceToStart()) {
         clear();
         int x = 1, y = 5;
@@ -64,6 +65,9 @@ void sniper() {
                         }
                         break;
                     }
+                }
+                if (y > 9) {
+                    break;
                 }
             }
         }

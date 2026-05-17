@@ -58,6 +58,5 @@ void gameStarter(int gameID) {
 		// TODO: 퀴즈 관련 작업 필요
 		break;
 	}
-
 	}
 }
