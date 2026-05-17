@@ -70,3 +70,25 @@ int selectValue(struct coord* coords, int length) {
 		}
 	}
 }
+
+
+int spaceToStart() {
+	while (1) {
+		char ch = _getch();
+		if (ch == 32) {
+			return 1;
+		}
+		if (ch == 27) {
+			return 0;
+		}
+	}
+}
+
+void escToExit() {
+	while (1) {
+		char ch = _getch();
+		if (ch == 27) {
+			break;
+		}
+	}
+}

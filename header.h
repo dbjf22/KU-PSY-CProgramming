@@ -21,7 +21,7 @@ extern struct flag getFlagInfo(struct coord flagPos, struct flag* flags, int fla
 
 // move.c
 extern void goToXY(int x, int y);
-extern void movePlayer(int* x, int* y, struct flag* flags, int flagSize, int width, int height);
+extern struct flag movePlayer(int* x, int* y, struct flag* flags, int flagSize, int width, int height);
 
 // util.c
 extern int random_range(int min, int max);
@@ -29,6 +29,11 @@ extern void clear();
 extern int isNotMove(int x, int y, struct flag* flags, int flagSize, int width, int height);
 extern int selectValue(struct coord* coords, int length);
 extern void clear_pos(struct coord start_coord, struct coord end_coord);
+extern int spaceToStart();
+extern void escToExit();
+
+// game.c
+extern void gameStarter(int gameID);
 
 // ascii.c
 extern char banner[];
@@ -45,6 +50,9 @@ extern char paper_reverse[];
 // rockScissorsPaper.c
 extern void printHand(int k, int isReverse);
 extern void rockScissorsPaper();
+
+// typingPractice.c
+extern void typingPractice();
 
 // structures
 struct flag {

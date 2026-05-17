@@ -1,6 +1,5 @@
 #include "header.h"
 #include "settings.h"
-#include "ascii.h"
 
 void printBanner(int start_x, int start_y) {
 	goToXY(start_x, start_y);
@@ -37,6 +36,7 @@ void printAsciiXY(char* ascii, int x, int y) {
 }
 
 void placeStage(int width, int height) {
+	goToXY(0, 0);
 	for (int i = 0; i < width; i++) {
 		printf("%s", STAGE_WALL);
 	}

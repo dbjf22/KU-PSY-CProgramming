@@ -20,6 +20,8 @@
 #define FLAG "▶"
 #define PLAYER "◆"
 
+#define GAME_COUNT 3
+
 //typingPractice
 #define NUM_SENTENCES 8
 #define MAX_LENGTH 100

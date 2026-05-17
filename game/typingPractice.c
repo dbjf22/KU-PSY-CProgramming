@@ -1,7 +1,8 @@
-#include "../header.h"
+﻿#include "../header.h"
 #include "../settings.h"
 
 void typingPractice() {
+    clear();
     char sentences[NUM_SENTENCES][MAX_LENGTH] = {
         "변수의 범위는 변수가 사용 가능한 가시성을 뜻한다.",
         "생존 시간은 변수가 메모리에 존재하는 시간이다.",
@@ -16,28 +17,33 @@ void typingPractice() {
     srand((unsigned int)time(NULL));
     int randomIndex = rand() % NUM_SENTENCES;
 
-    printf("=== C언어 복습 타자 연습 ===\n");
-    printf("제시되는 문장을 10초 안에 정확하게 입력하세요!\n");
-    printf("시작하려면 엔터를 누르세요...");
-    getchar();
-    printf("\n시작합니다!\n\n");
-    
-    printf("[문제] %s\n", sentences[randomIndex]);
-    printf("입력: ");
+    printf("[ C언어 복습 타자 연습 ]\n\n");
+    printf("제시되는 문장을 10초 안에 정확하게 입력하세요!\n\n");
+    printf("시작하려면 스페이스를 누르세요. \n나가려면 ESC를 누르세요.\n");
+    if (spaceToStart()) {
+        clear();
 
-    time_t startTime = time(NULL);
+        printf("[문제] %s\n", sentences[randomIndex]);
+        printf("입력: ");
 
-    fgets(Typing, sizeof(Typing), stdin);
-    Typing[strcspn(Typing, "\n")] = '\0';
+        time_t startTime = time(NULL);
 
-    time_t endTime = time(NULL);
-    double duration = difftime(endTime, startTime);
+        fgets(Typing, sizeof(Typing), stdin);
+        Typing[strcspn(Typing, "\n")] = '\0';
 
-    printf("\n=== 결과 ===\n");
-    if (duration > TIME_LIMIT) 
-        printf("실패! 시간 초과! (%.0f초 걸림 / 10초 제한)\n", duration);
-    else if (strcmp(sentences[randomIndex], Typing) == 0) 
-        printf("성공! (%.0f초 걸림)\n", duration);
-    else 
-        printf("실패! 오타가 있습니다! (문장과 정확히 일치해야 합니다)\n");
+        time_t endTime = time(NULL);
+        double duration = difftime(endTime, startTime);
+
+        printf("\n=== 결과 ===\n");
+        if (duration > TIME_LIMIT)
+            printf("실패! 시간 초과! (%.0f초 걸림 / 10초 제한)\n", duration);
+        else if (strcmp(sentences[randomIndex], Typing) == 0)
+            printf("성공! (%.0f초 걸림)\n", duration);
+        else
+            printf("실패! 오타가 있습니다! (문장과 정확히 일치해야 합니다)\n");
+
+        printf("ESC 키를 누르면 나가집니다.");
+        escToExit();
+        clear();
+    }
 }
