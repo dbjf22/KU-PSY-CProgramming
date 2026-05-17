@@ -14,7 +14,7 @@ void typingPractice() {
         "gets_s 함수는 문자열 끝에 널 문자를 추가한다."
     };
     char Typing[MAX_LENGTH];
-    srand((unsigned int)time(NULL));
+
     int randomIndex = rand() % NUM_SENTENCES;
 
     printf("[ C언어 복습 타자 연습 ]\n\n");

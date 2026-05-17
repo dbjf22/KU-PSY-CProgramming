@@ -11,7 +11,7 @@
 void gameStarter(int gameID) {
 	switch (gameID) {
 	case 0: {
-		// TODO: 꽝 멘트 작업 필요
+		dud();
 		break;
 	}
 	case 1: {
@@ -43,7 +43,7 @@ void gameStarter(int gameID) {
 		break;
 	}
 	case 8: {
-		// TODO: 네모 칸 안에 멈추기 관련 작업 필요
+		sniper();
 		break;
 	}
 	case 9: {

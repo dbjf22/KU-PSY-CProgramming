@@ -45,14 +45,23 @@ extern char scissors[];
 extern char scissors_reverse[];
 extern char rock_reverse[];
 extern char paper_reverse[];
+extern char sniperHorizontal[];
+extern char sniperVertical[];
 
 // games
+// dud.c
+extern void dud();
+
 // rockScissorsPaper.c
 extern void printHand(int k, int isReverse);
 extern void rockScissorsPaper();
 
+// sniper.c
+extern void sniper();
+
 // typingPractice.c
 extern void typingPractice();
+
 
 // structures
 struct flag {

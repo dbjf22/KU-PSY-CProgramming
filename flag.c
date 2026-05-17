@@ -6,7 +6,7 @@ void initFlags(int width_max, int height_max, struct flag* flags, int count, str
 		while (1) {
 			flags[i].x = random_range(1, width_max - 1);
 			flags[i].y = random_range(1, height_max - 1);
-			flags[i].item_id = 10 - 6 * (rand() % 2); // FIXME: 나중에 추가되면 random_range() 사용
+			flags[i].item_id = 8; // FIXME: 나중에 추가되면 random_range() 사용
 			if (!checkConflictFlag(i, flags, playerPos)) {
 				break;
 			}

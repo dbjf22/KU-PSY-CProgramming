@@ -66,20 +66,16 @@ int main(void) {
 				int x = DEFAULT_PLAYER_X_EASY, y = DEFAULT_PLAYER_Y_EASY;
 				struct coord playerPos = { x, y };
 				initFlags(WIDTH_EASY, HEIGHT_EASY, flags, FLAG_COUNT_EASY, playerPos);
-				placeStage(WIDTH_EASY, HEIGHT_EASY);   // 최초 1회만
+				placeStage(WIDTH_EASY, HEIGHT_EASY);
 				placeFlag(flags, FLAG_COUNT_EASY);
 				placePlayer(playerPos);
 				while (1) {
 					struct coord prevPos = playerPos;
 
 					int game = movePlayer(&playerPos.x, &playerPos.y, flags, FLAG_COUNT_EASY, WIDTH_EASY, HEIGHT_EASY).item_id;
-					
 
 					if (game >= 0) {
-						// 미니게임 실행
 						gameStarter(game);
-
-						// 미니게임 끝난 후 게임판 다시 그리기
 						clear();
 						placeStage(WIDTH_EASY, HEIGHT_EASY);
 						placeFlag(flags, FLAG_COUNT_EASY);

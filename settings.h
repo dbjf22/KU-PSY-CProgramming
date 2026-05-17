@@ -20,7 +20,8 @@
 #define FLAG "▶"
 #define PLAYER "◆"
 
-#define GAME_COUNT 3
+// dud
+#define DUD_SECONDS 10
 
 //typingPractice
 #define NUM_SENTENCES 8
