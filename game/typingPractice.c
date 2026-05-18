@@ -34,7 +34,7 @@ void typingPractice() {
         time_t endTime = time(NULL);
         double duration = difftime(endTime, startTime);
 
-        printf("\n=== 결과 ===\n");
+        printf("\n[ 결과 ]\n");
         if (duration > TIME_LIMIT)
             printf("실패! 시간 초과! (%.0f초 걸림 / 10초 제한)\n", duration);
         else if (strcmp(sentences[randomIndex], typing) == 0)
@@ -42,7 +42,7 @@ void typingPractice() {
         else
             printf("실패! 오타가 있습니다! (문장과 정확히 일치해야 합니다)\n");
 
-        printf("ESC 키를 누르면 나가집니다.");
+        printf("ESC 키를 누르면 나가집니다.\n");
         escToExit();
         clear();
     }
