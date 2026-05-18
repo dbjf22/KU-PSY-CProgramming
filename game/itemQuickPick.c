@@ -80,7 +80,7 @@ int checkItem(int x, int y, struct flag* items, int size) {
 void itemQuickPick() {
     clear();
     printf("[ 아이템 빨리 먹기 ]\n\n");
-    printf("Enter 키를 눌러 움직이는 사각형을 틀 안에 넣어 조준경을 정렬하세요!\n\n");
+    printf("방향키를 눌러 맵 안의 모든 아이템을 먹으세요!\n\n");
     printf("시작하려면 스페이스를 누르세요. \n나가려면 ESC를 누르세요.\n");
 
     if (spaceToStart()) {
