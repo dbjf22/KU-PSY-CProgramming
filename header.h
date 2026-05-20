@@ -50,6 +50,11 @@ extern char rock_reverse[];
 extern char paper_reverse[];
 extern char sniperHorizontal[];
 extern char sniperVertical[];
+extern char cham_stop[];
+extern char cham_up[];
+extern char cham_right[];
+extern char cham_down[];
+extern char cham_left[];
 
 // games
 // dud.c

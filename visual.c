@@ -77,3 +77,4 @@ void placePlayer(struct coord playerPos) {
 	goToXY(playerPos.x, playerPos.y);
 	printf("%s\b", PLAYER);
 }
+

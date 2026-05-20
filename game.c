@@ -31,7 +31,7 @@ void gameStarter(int gameID) {
 		break;
 	}
 	case 5: {
-		// TODO: 참참참 4방향 관련 작업 필요
+		chamCham();
 		break;
 	}
 	case 6: {

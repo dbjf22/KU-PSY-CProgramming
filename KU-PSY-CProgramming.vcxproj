@@ -126,6 +126,7 @@
     <ClCompile Include="ascii.c" />
     <ClCompile Include="flag.c" />
     <ClCompile Include="game.c" />
+    <ClCompile Include="game\chamCham.c" />
     <ClCompile Include="game\dud.c" />
     <ClCompile Include="game\itemQuickPick.c" />
     <ClCompile Include="game\rockScissorsPaper.c" />
